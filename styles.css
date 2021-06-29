@@ -91,7 +91,7 @@ footer h3,
 }
 
 footer ul li a {
-  color: black;
+  color: var(--dark-violet);
 }
 
 .footer-item {
