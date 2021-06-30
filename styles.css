@@ -103,7 +103,7 @@ footer ul li a {
   align-items: center;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 1439px) {
+@media only screen and (min-width: 375px) and (max-width: 480px) {
   #image-intro-desktop,
   #nav-menu,
   #icon-close {
@@ -333,6 +333,18 @@ footer ul li a {
   .footer-item ul li:not(:last-child) {
     padding-bottom: 15px;
   }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* iPads, Tablets */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Small screens, laptops */
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  /* Desktops, large screens */
 }
 
 @media only screen and (min-width: 1440px) {
