@@ -103,7 +103,11 @@ footer ul li a {
   align-items: center;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 480px) {
+.fixed {
+  position: fixed;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   #image-intro-desktop,
   #nav-menu,
   #icon-close {
@@ -119,7 +123,7 @@ footer ul li a {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 2;
   }
 
   #nav-header {
@@ -147,11 +151,11 @@ footer ul li a {
     background: url("images/bg-pattern-mobile-nav.svg");
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: contain;
+    background-size: 100% 100%;
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 218px;
   }
 
   #nav-menu li a {
@@ -159,6 +163,10 @@ footer ul li a {
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 1.2rem;
+  }
+
+  #nav-menu li {
+    z-index: 2;
   }
 
   #nav-menu li:not(:last-child) {
@@ -220,7 +228,7 @@ footer ul li a {
 
   .white-btn,
   h1 {
-    z-index: 9;
+    z-index: 1;
   }
 
   #insure-description {
@@ -304,6 +312,26 @@ footer ul li a {
 
   footer {
     padding: 90px 25px;
+    position: relative;
+  }
+
+  footer::before {
+    content: "";
+    position: absolute;
+    background: url("images/bg-pattern-footer-mobile.svg");
+    top: 0;
+    left: 0;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 173px;
+    z-index: 0;
+  }
+
+  #footer-header img,
+  #icons li {
+    z-index: 1;
   }
 
   #footer-header,
@@ -337,17 +365,17 @@ footer ul li a {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   /* iPads, Tablets */
+  #image-intro-mobile {
+    display: none !important;
+  }
+
+  #image-intro-desktop {
+    display: block !important;
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Small screens, laptops */
-}
-
-@media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  /* Desktops, large screens */
-}
-
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   #image-intro-mobile,
   #icon-hamburger,
   #icon-close {
@@ -441,7 +469,7 @@ footer ul li a {
 
   #hero-text {
     order: 1;
-    z-index: 9;
+    z-index: 1;
   }
 
   #image-intro-desktop {
@@ -536,12 +564,30 @@ footer ul li a {
 
   footer {
     padding: 50px 150px;
+    position: relative;
+  }
+
+  footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("images/bg-pattern-footer-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 528px;
+    height: 231px;
   }
 
   #footer-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  #footer-header img,
+  #footer-items .footer-item {
+    z-index: 1;
   }
 
   #icons li a {
